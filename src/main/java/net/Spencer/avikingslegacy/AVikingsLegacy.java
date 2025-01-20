@@ -20,6 +20,7 @@ import org.slf4j.Logger;
 @Mod(AVikingsLegacy.MOD_ID)
 public class AVikingsLegacy
 {
+    //test addition
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "avikingslegacy";
     // Directly reference a slf4j logger
