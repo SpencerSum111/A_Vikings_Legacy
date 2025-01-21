@@ -48,8 +48,7 @@ public class AVikingsLegacy
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(ModItems.COFFEE_TREE_SEED);
-            event.accept(ModItems.COFFEE_CHERRY);
+
         }
     }
 

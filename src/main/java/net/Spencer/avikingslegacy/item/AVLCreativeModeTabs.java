@@ -22,6 +22,7 @@ public class AVLCreativeModeTabs {
                             .displayItems((pParameters, pOutput) -> {
                                 pOutput.accept(ModItems.COFFEE_TREE_SEED.get());
                                 pOutput.accept(ModItems.COFFEE_CHERRY.get());
+                                pOutput.accept(ModItems.COFFEE_BEANS.get());
                                 pOutput.accept(ModItems.VIKINITECRYSTAL.get());
                             })
                             .build());
