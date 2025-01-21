@@ -1,6 +1,7 @@
 package net.Spencer.avikingslegacy;
 
 import com.mojang.logging.LogUtils;
+import net.Spencer.avikingslegacy.block.ModBlocks;
 import net.Spencer.avikingslegacy.item.AVLCreativeModeTabs;
 import net.Spencer.avikingslegacy.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class AVikingsLegacy
         AVLCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

@@ -1,6 +1,7 @@
 package net.Spencer.avikingslegacy.item;
 
 import net.Spencer.avikingslegacy.AVikingsLegacy;
+import net.Spencer.avikingslegacy.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,6 +26,7 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.COFFEE_BEANS.get());
                                 pOutput.accept(ModItems.COFFEE.get());
                                 pOutput.accept(ModItems.VIKINITECRYSTAL.get());
+                                pOutput.accept(ModBlocks.VIKINITE_ORE.get());
                             })
                             .build());
 
