@@ -21,6 +21,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VIKINITECRYSTAL = ITEMS.register("vikinite_crystal",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIKINITEINGOT = ITEMS.register("vikinite_ingot",
+            () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

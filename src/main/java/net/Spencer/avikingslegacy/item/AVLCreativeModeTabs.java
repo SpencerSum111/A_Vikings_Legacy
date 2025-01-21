@@ -27,6 +27,7 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.COFFEE.get());
                                 pOutput.accept(ModItems.VIKINITECRYSTAL.get());
                                 pOutput.accept(ModBlocks.VIKINITE_ORE.get());
+                                pOutput.accept(ModItems.VIKINITEINGOT.get());
                             })
                             .build());
 
