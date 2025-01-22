@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients":[
+    {
+      "item": "avikingslegacy:coffee_cherry"
+    }
+  ],
+  "result": {
+    "item": "avikingslegacy:coffee_beans",
+    "count": 2
+  }
+}
