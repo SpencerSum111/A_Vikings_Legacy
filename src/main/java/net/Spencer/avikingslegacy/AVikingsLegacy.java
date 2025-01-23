@@ -2,6 +2,7 @@ package net.Spencer.avikingslegacy;
 
 import com.mojang.logging.LogUtils;
 import net.Spencer.avikingslegacy.block.ModBlocks;
+import net.Spencer.avikingslegacy.effect.ModEffects;
 import net.Spencer.avikingslegacy.item.AVLCreativeModeTabs;
 import net.Spencer.avikingslegacy.item.ModItems;
 import net.Spencer.avikingslegacy.potion.ModPotions;
@@ -38,6 +39,7 @@ public class AVikingsLegacy
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModPotions.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -49,6 +51,7 @@ public class AVikingsLegacy
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+
     }
 
     // Add the example block item to the building blocks tab

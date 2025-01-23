@@ -6,6 +6,10 @@
   "item.avikingslegacy.vikinite_crystal": "Vikinite Crystal",
   "item.avikingslegacy.vikinite_ingot": "Vikinite Ingot",
 
+  "item.minecraft.potion.effect.coffee": "Coffee",
+  "item.minecraft.splash_potion.effect.coffee": "Throwable Coffee",
+  "item.minecraft.lingering_potion.effect.coffee": "Coffee Stain Maker",
+
   "block.avikingslegacy.vikinite_ore": "Vikinite Ore",
   "block.avikingslegacy.block_of_vikinite": "Block of Vikinite",
 
