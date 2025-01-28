@@ -23,11 +23,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COFFEE_CHERRY);
         simpleItem(ModItems.COFFEE_BEANS);
         simpleItem(ModItems.COFFEE);
+
+        handheldItem(ModItems.VIKINITE_SWORD);
+        handheldItem(ModItems.VIKINITE_AXE);
+        handheldItem(ModItems.VIKINITE_PICKAXE);
+        handheldItem(ModItems.VIKINITE_SHOVEL);
+        handheldItem(ModItems.VIKINITE_HOE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){
         return withExistingParent(item.getId().getPath(),
         new ResourceLocation("item/generated")).texture("layer0",
         new ResourceLocation(AVikingsLegacy.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(AVikingsLegacy.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

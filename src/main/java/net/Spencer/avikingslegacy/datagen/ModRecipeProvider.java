@@ -5,6 +5,8 @@ import net.Spencer.avikingslegacy.block.ModBlocks;
 import net.Spencer.avikingslegacy.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -34,6 +36,51 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("VVV")
                 .pattern("VVV")
                 .define('V', ModItems.VIKINITEINGOT.get())
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.VIKINITE_SWORD.get())
+                .pattern(" V ")
+                .pattern(" V ")
+                .pattern(" S ")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.VIKINITE_AXE.get())
+                .pattern(" VV")
+                .pattern(" SV")
+                .pattern(" S ")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.VIKINITE_PICKAXE.get())
+                .pattern("VVV")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.VIKINITE_SHOVEL.get())
+                .pattern(" V ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.VIKINITE_HOE.get())
+                .pattern("VV ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
                 .save(pWriter);
 

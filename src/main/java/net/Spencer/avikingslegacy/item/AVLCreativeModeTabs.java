@@ -31,6 +31,11 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModBlocks.VIKINITE_ORE.get());
                                 pOutput.accept(ModItems.VIKINITEINGOT.get());
                                 pOutput.accept(ModBlocks.BLOCK_OF_VIKINITE.get());
+                                pOutput.accept(ModItems.VIKINITE_SWORD.get());
+                                pOutput.accept(ModItems.VIKINITE_AXE.get());
+                                pOutput.accept(ModItems.VIKINITE_PICKAXE.get());
+                                pOutput.accept(ModItems.VIKINITE_SHOVEL.get());
+                                pOutput.accept(ModItems.VIKINITE_HOE.get());
                             })
                             .build());
 

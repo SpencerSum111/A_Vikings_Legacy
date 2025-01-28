@@ -2,9 +2,11 @@ package net.Spencer.avikingslegacy.datagen;
 
 import net.Spencer.avikingslegacy.AVikingsLegacy;
 import net.Spencer.avikingslegacy.block.ModBlocks;
+import net.Spencer.avikingslegacy.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -34,5 +36,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.BLOCK_OF_VIKINITE.get(), ModBlocks.VIKINITE_ORE.get());
+
+        this.tag(ModTags.Blocks.NEEDS_VIKINITE_TOOL)
+                .add(Blocks.BEDROCK);
     }
 }
