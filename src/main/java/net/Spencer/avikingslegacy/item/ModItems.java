@@ -1,6 +1,7 @@
 package net.Spencer.avikingslegacy.item;
 
 import net.Spencer.avikingslegacy.AVikingsLegacy;
+import net.Spencer.avikingslegacy.block.ModBlocks;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, AVikingsLegacy.MOD_ID);
 
     public static final RegistryObject<Item> COFFEE_TREE_SEED = ITEMS.register("coffee_tree_seed",
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_CHERRY = ITEMS.register("coffee_cherry",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_BEANS = ITEMS.register("coffee_beans",

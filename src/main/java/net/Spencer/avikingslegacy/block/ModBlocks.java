@@ -1,6 +1,7 @@
 package net.Spencer.avikingslegacy.block;
 
 import net.Spencer.avikingslegacy.AVikingsLegacy;
+import net.Spencer.avikingslegacy.block.custom.CoffeeCropBlock;
 import net.Spencer.avikingslegacy.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,6 +25,9 @@ public static final RegistryObject<Block> VIKINITE_ORE = registerBlock("vikinite
         new Block(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLOCK_OF_VIKINITE = registerBlock("block_of_vikinite", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop", () ->
+            new CoffeeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
     RegistryObject<T> toReturn = BLOCKS.register(name, block);
