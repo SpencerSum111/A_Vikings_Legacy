@@ -19,10 +19,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
             () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> VIKINITECRYSTAL = ITEMS.register("vikinite_crystal",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VIKINITEINGOT = ITEMS.register("vikinite_ingot",
             () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> VIKINITE_SWORD = ITEMS.register("vikinite_sword",
             () -> new SwordItem(ModToolTiers.VIKINITE, 14, -2F, new Item.Properties()));
     public static final RegistryObject<Item> VIKINITE_AXE = ITEMS.register("vikinite_axe",
@@ -34,7 +36,14 @@ public class ModItems {
     public static final RegistryObject<Item> VIKINITE_HOE = ITEMS.register("vikinite_hoe",
             () -> new HoeItem(ModToolTiers.VIKINITE, 0, 0, new Item.Properties()));
 
-
+    public static final RegistryObject<Item> VIKINITE_HELMET = ITEMS.register("vikinite_helmet",
+            () -> new ArmorItem(ModArmorMaterials.VIKINITE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> VIKINITE_CHESTPLATE = ITEMS.register("vikinite_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.VIKINITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> VIKINITE_LEGGINGS = ITEMS.register("vikinite_leggings",
+            () -> new ArmorItem(ModArmorMaterials.VIKINITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> VIKINITE_BOOTS = ITEMS.register("vikinite_boots",
+            () -> new ArmorItem(ModArmorMaterials.VIKINITE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

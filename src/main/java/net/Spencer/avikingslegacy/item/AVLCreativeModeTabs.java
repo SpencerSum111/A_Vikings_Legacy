@@ -27,15 +27,23 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.COFFEE_CHERRY.get());
                                 pOutput.accept(ModItems.COFFEE_BEANS.get());
                                 pOutput.accept(ModItems.COFFEE.get());
+
                                 pOutput.accept(ModItems.VIKINITECRYSTAL.get());
                                 pOutput.accept(ModBlocks.VIKINITE_ORE.get());
                                 pOutput.accept(ModItems.VIKINITEINGOT.get());
                                 pOutput.accept(ModBlocks.BLOCK_OF_VIKINITE.get());
+
                                 pOutput.accept(ModItems.VIKINITE_SWORD.get());
                                 pOutput.accept(ModItems.VIKINITE_AXE.get());
                                 pOutput.accept(ModItems.VIKINITE_PICKAXE.get());
                                 pOutput.accept(ModItems.VIKINITE_SHOVEL.get());
                                 pOutput.accept(ModItems.VIKINITE_HOE.get());
+
+                                pOutput.accept(ModItems.VIKINITE_HELMET.get());
+                                pOutput.accept(ModItems.VIKINITE_CHESTPLATE.get());
+                                pOutput.accept(ModItems.VIKINITE_LEGGINGS.get());
+                                pOutput.accept(ModItems.VIKINITE_BOOTS.get());
+
                             })
                             .build());
 

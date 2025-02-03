@@ -39,7 +39,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.VIKINITE_SWORD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.VIKINITE_SWORD.get())
                 .pattern(" V ")
                 .pattern(" V ")
                 .pattern(" S ")
@@ -81,6 +81,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .define('V', ModItems.VIKINITEINGOT.get())
                 .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.VIKINITE_HELMET.get())
+                .pattern("VVV")
+                .pattern("V V")
+                .pattern("   ")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.VIKINITE_CHESTPLATE.get())
+                .pattern("V V")
+                .pattern("VVV")
+                .pattern("VVV")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.VIKINITE_LEGGINGS.get())
+                .pattern("VVV")
+                .pattern("V V")
+                .pattern("V V")
+                .define('V', ModItems.VIKINITEINGOT.get())
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.VIKINITE_BOOTS.get())
+                .pattern("V V")
+                .pattern("V V")
+                .pattern("   ")
+                .define('V', ModItems.VIKINITEINGOT.get())
                 .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
                 .save(pWriter);
 

@@ -3,13 +3,21 @@
   "item.avikingslegacy.coffee_cherry": "Coffee Cherry",
   "item.avikingslegacy.coffee_beans": "Coffee Beans",
   "item.avikingslegacy.coffee": "Coffee",
+
   "item.avikingslegacy.vikinite_crystal": "Vikinite Crystal",
   "item.avikingslegacy.vikinite_ingot": "Vikinite Ingot",
+
   "item.avikingslegacy.vikinite_sword": "Vikinite Sword",
   "item.avikingslegacy.vikinite_axe": "Vikinite Axe",
   "item.avikingslegacy.vikinite_pickaxe": "Vikinite Pickaxe",
   "item.avikingslegacy.vikinite_shovel": "Vikinite Shovel",
   "item.avikingslegacy.vikinite_hoe": "Vikinite Hoe",
+
+  "item.avikingslegacy.vikinite_helmet": "Vikinite Helmet",
+  "item.avikingslegacy.vikinite_chestplate": "Vikinite Chestplate",
+  "item.avikingslegacy.vikinite_leggings": "Vikinite Leggings",
+  "item.avikingslegacy.vikinite_boots": "Vikinite Boots",
+
 
   "item.minecraft.potion.effect.coffee": "Coffee",
   "item.minecraft.splash_potion.effect.coffee": "Throwable Coffee",
