@@ -61,6 +61,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     }
 
+
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
         final String MOD_ID = AVikingsLegacy.MOD_ID;
 

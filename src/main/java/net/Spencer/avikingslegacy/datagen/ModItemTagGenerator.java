@@ -27,4 +27,5 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.VIKINITE_BOOTS.get());
 
     }
+
 }
