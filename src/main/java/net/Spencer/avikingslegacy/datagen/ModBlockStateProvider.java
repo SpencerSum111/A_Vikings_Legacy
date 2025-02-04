@@ -24,6 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.VIKINITE_ORE);
         blockWithItem(ModBlocks.BLOCK_OF_VIKINITE);
+        blockWithItem(ModBlocks.DEEPSLATE_VIKINITE_ORE);
 
         makeCoffeeCrop((CropBlock) ModBlocks.COFFEE_CROP.get(), "coffee_stage", "coffee_stage");
     }

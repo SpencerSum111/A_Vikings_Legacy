@@ -32,6 +32,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLOCK_OF_VIKINITE.get());
         this.add(ModBlocks.VIKINITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.VIKINITE_ORE.get(), ModItems.VIKINITECRYSTAL.get()));
+        this.add(ModBlocks.DEEPSLATE_VIKINITE_ORE.get(),
+                block -> createOreDrop(ModBlocks.DEEPSLATE_VIKINITE_ORE.get(), ModItems.VIKINITECRYSTAL.get()));
 
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())

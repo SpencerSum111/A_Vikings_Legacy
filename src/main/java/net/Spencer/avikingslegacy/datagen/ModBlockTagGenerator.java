@@ -24,7 +24,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_AXE);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.BLOCK_OF_VIKINITE.get(), ModBlocks.VIKINITE_ORE.get());
+                .add(ModBlocks.BLOCK_OF_VIKINITE.get(), ModBlocks.VIKINITE_ORE.get(), ModBlocks.DEEPSLATE_VIKINITE_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
 
@@ -35,7 +35,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_IRON_TOOL);
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.BLOCK_OF_VIKINITE.get(), ModBlocks.VIKINITE_ORE.get());
+                .add(ModBlocks.BLOCK_OF_VIKINITE.get(), ModBlocks.VIKINITE_ORE.get(), ModBlocks.DEEPSLATE_VIKINITE_ORE.get());
 
         this.tag(ModTags.Blocks.NEEDS_VIKINITE_TOOL)
                 .add(Blocks.BEDROCK);

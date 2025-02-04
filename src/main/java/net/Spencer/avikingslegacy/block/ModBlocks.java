@@ -23,6 +23,8 @@ public class ModBlocks {
 
 public static final RegistryObject<Block> VIKINITE_ORE = registerBlock("vikinite_ore", () ->
         new Block(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEPSLATE_VIKINITE_ORE = registerBlock("deepslate_vikinite_ore", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLOCK_OF_VIKINITE = registerBlock("block_of_vikinite", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
