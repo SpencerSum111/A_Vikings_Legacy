@@ -30,9 +30,9 @@ public class AVikingsLegacy
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public AVikingsLegacy(FMLJavaModLoadingContext context){
+    public AVikingsLegacy(){
 
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         AVLCreativeModeTabs.register(modEventBus);
 
