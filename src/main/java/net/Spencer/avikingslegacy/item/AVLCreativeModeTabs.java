@@ -45,6 +45,11 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.VIKINITE_LEGGINGS.get());
                                 pOutput.accept(ModItems.VIKINITE_BOOTS.get());
 
+                                pOutput.accept(ModItems.VIKING_EMBLEM_RED.get());
+                                pOutput.accept(ModItems.VIKING_EMBLEM_BLUE.get());
+                                pOutput.accept(ModItems.VIKING_EMBLEM_GREEN.get());
+                                pOutput.accept(ModItems.VIKING_EMBLEM_ORANGE.get());
+
                             })
                             .build());
 

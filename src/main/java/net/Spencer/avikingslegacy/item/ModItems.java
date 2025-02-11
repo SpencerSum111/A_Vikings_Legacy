@@ -46,6 +46,15 @@ public class ModItems {
     public static final RegistryObject<Item> VIKINITE_BOOTS = ITEMS.register("vikinite_boots",
             () -> new ArmorItem(ModArmorMaterials.VIKINITE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    public static final RegistryObject<Item> VIKING_EMBLEM_RED = ITEMS.register("viking_emblem_red",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIKING_EMBLEM_BLUE = ITEMS.register("viking_emblem_blue",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIKING_EMBLEM_GREEN = ITEMS.register("viking_emblem_green",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIKING_EMBLEM_ORANGE = ITEMS.register("viking_emblem_orange",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

@@ -14,6 +14,7 @@ import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
@@ -47,6 +48,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COFFEE_CHERRY);
         simpleItem(ModItems.COFFEE_BEANS);
         simpleItem(ModItems.COFFEE);
+
+        simpleItem(ModItems.VIKING_EMBLEM_RED);
+        simpleItem(ModItems.VIKING_EMBLEM_BLUE);
+        simpleItem(ModItems.VIKING_EMBLEM_GREEN);
+        simpleItem(ModItems.VIKING_EMBLEM_ORANGE);
 
         handheldItem(ModItems.VIKINITE_SWORD);
         handheldItem(ModItems.VIKINITE_AXE);
