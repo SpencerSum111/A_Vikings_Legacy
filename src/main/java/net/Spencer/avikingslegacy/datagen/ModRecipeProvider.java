@@ -129,7 +129,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CUP_OF_COFFEE.get())
                 .pattern(" S ")
                 .pattern(" C ")
-                .pattern(" B ")
+                .pattern(" P ")
                 .define('C', ModItems.COFFEE_BEANS.get())
                 .define('P', Items.POTION)
                 .define('S', Items.SUGAR)
