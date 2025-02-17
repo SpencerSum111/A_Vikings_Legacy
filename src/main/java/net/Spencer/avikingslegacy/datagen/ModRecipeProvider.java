@@ -121,9 +121,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.BLOCK_OF_VIKINITE.get()), has(ModBlocks.BLOCK_OF_VIKINITE.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COFFEE_BEANS.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COFFEE_BEANS.get(), 3)
                 .requires(ModItems.COFFEE_CHERRY.get())
                 .unlockedBy(getHasName(ModItems.COFFEE_CHERRY.get()), has(ModItems.COFFEE_CHERRY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CUP_OF_COFFEE.get())
+                .pattern("   ")
+                .pattern(" C ")
+                .pattern(" B ")
+                .define('C', ModItems.COFFEE_BEANS.get())
+                .define('B', Items.GLASS_BOTTLE)
+                .unlockedBy(getHasName(ModItems.COFFEE_BEANS.get()), has(ModItems.COFFEE_BEANS.get()))
+                .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);
 
 

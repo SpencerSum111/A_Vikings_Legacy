@@ -18,8 +18,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_BEANS = ITEMS.register("coffee_beans",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
-            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CUP_OF_COFFEE = ITEMS.register("cup_of_coffee",
+            () -> new Item(new Item.Properties().food(ModFoods.CUP_OF_COFFEE)));
 
     public static final RegistryObject<Item> VIKINITECRYSTAL = ITEMS.register("vikinite_crystal",
             () -> new Item(new Item.Properties()));

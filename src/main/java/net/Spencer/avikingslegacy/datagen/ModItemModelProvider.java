@@ -47,7 +47,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COFFEE_TREE_SEED);
         simpleItem(ModItems.COFFEE_CHERRY);
         simpleItem(ModItems.COFFEE_BEANS);
-        simpleItem(ModItems.COFFEE);
+        simpleItem(ModItems.CUP_OF_COFFEE);
 
         simpleItem(ModItems.VIKING_EMBLEM_RED);
         simpleItem(ModItems.VIKING_EMBLEM_BLUE);

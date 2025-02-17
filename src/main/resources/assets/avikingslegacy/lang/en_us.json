@@ -2,7 +2,7 @@
   "item.avikingslegacy.coffee_tree_seed": "Coffee Tree Seed",
   "item.avikingslegacy.coffee_cherry": "Coffee Cherry",
   "item.avikingslegacy.coffee_beans": "Coffee Beans",
-  "item.avikingslegacy.coffee": "Coffee",
+  "item.avikingslegacy.cup_of_coffee": "Cup of Coffee",
 
   "item.avikingslegacy.vikinite_crystal": "Vikinite Crystal",
   "item.avikingslegacy.vikinite_ingot": "Vikinite Ingot",
@@ -31,6 +31,8 @@
   "block.avikingslegacy.vikinite_ore": "Vikinite Ore",
   "block.avikingslegacy.deepslate_vikinite_ore": "Deepslate Vikinite Ore",
   "block.avikingslegacy.block_of_vikinite": "Block of Vikinite",
+
+  "block.avikingslegacy.viking_altar": "Viking Altar",
 
   "creativetab.avl_tab": "A Viking's Legacy"
 }
