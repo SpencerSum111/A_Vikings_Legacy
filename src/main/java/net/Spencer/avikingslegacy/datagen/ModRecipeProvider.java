@@ -126,6 +126,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.COFFEE_CHERRY.get()), has(ModItems.COFFEE_CHERRY.get()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COFFEE_TREE_SEED.get())
+                .requires(Items.WHEAT_SEEDS)
+                .requires(Items.COCOA_BEANS)
+                .unlockedBy(getHasName(Items.WHEAT_SEEDS), has(Items.WHEAT_SEEDS))
+                .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CUP_OF_COFFEE.get())
                 .pattern(" S ")
                 .pattern(" C ")
