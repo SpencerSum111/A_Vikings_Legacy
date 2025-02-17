@@ -127,11 +127,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CUP_OF_COFFEE.get())
-                .pattern("   ")
+                .pattern(" S ")
                 .pattern(" C ")
                 .pattern(" B ")
                 .define('C', ModItems.COFFEE_BEANS.get())
-                .define('B', Items.GLASS_BOTTLE)
+                .define('P', Items.POTION)
+                .define('S', Items.SUGAR)
                 .unlockedBy(getHasName(ModItems.COFFEE_BEANS.get()), has(ModItems.COFFEE_BEANS.get()))
                 .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);
