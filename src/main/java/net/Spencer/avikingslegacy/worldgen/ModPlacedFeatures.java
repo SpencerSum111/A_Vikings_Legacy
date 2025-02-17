@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
                 context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, VIKINITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow
-                (ModConfiguredFeatures.VIKINITE_ORE_KEY), ModOrePlacement.commonOrePlacement(1,
+                (ModConfiguredFeatures.VIKINITE_ORE_KEY), ModOrePlacement.commonOrePlacement(3,
                 HeightRangePlacement.triangle(VerticalAnchor.absolute(-64),
                         VerticalAnchor.absolute(10))));
     }
