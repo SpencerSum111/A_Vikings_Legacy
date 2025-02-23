@@ -4,11 +4,15 @@ import com.mojang.logging.LogUtils;
 import net.Spencer.avikingslegacy.block.ModBlocks;
 //import net.Spencer.avikingslegacy.block.entity.ModBlockEntities;
 import net.Spencer.avikingslegacy.effect.ModEffects;
+import net.Spencer.avikingslegacy.entity.ModEntities;
+import net.Spencer.avikingslegacy.entity.client.VikingCaptainRenderer;
 import net.Spencer.avikingslegacy.item.AVLCreativeModeTabs;
 import net.Spencer.avikingslegacy.item.ModItems;
 import net.Spencer.avikingslegacy.potion.ModPotions;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -44,6 +48,8 @@ public class AVikingsLegacy
 
         //ModBlockEntities.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -75,8 +81,8 @@ public class AVikingsLegacy
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.VIKING_CAPTAIN.get(), VikingCaptainRenderer::new);
         }
     }
 }

@@ -65,6 +65,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.VIKINITE_LEGGINGS);
         trimmedArmorItem(ModItems.VIKINITE_BOOTS);
 
+        withExistingParent(ModItems.VIKING_CAPTAIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
     }
 
 

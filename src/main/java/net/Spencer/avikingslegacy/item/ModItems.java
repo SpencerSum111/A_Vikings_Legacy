@@ -2,7 +2,10 @@ package net.Spencer.avikingslegacy.item;
 
 import net.Spencer.avikingslegacy.AVikingsLegacy;
 import net.Spencer.avikingslegacy.block.ModBlocks;
+import net.Spencer.avikingslegacy.entity.ModEntities;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -54,6 +57,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VIKING_EMBLEM_ORANGE = ITEMS.register("viking_emblem_orange",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> VIKING_CAPTAIN_SPAWN_EGG = ITEMS.register("viking_captain_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.VIKING_CAPTAIN, 0x3C39FF, 0xFFA649, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
