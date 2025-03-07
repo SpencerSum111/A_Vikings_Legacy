@@ -5,6 +5,7 @@ import net.Spencer.avikingslegacy.block.ModBlocks;
 import net.Spencer.avikingslegacy.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -116,6 +117,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VIKING_GOLD.get())
+                .pattern(" N ")
+                .pattern("NGN")
+                .pattern(" N ")
+                .define('N', ModItems.VIKINITE_NUGGET.get())
+                .define('G', Items.GOLD_NUGGET)
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VIKINITEINGOT.get())
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .define('N', ModItems.VIKINITE_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter, name("vikinite_ingot_from_nuggets"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VIKINITE_NUGGET.get(), 9)
+                .requires(ModItems.VIKINITEINGOT.get())
+                .unlockedBy(getHasName(ModItems.VIKINITEINGOT.get()), has(ModItems.VIKINITEINGOT.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VIKINITEINGOT.get(), 9)
                 .requires(ModBlocks.BLOCK_OF_VIKINITE.get())
                 .unlockedBy(getHasName(ModBlocks.BLOCK_OF_VIKINITE.get()), has(ModBlocks.BLOCK_OF_VIKINITE.get()))
@@ -161,5 +184,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, AVikingsLegacy.MOD_ID + ":" + (pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+    private ResourceLocation name(String name) {
+        return new ResourceLocation(AVikingsLegacy.MOD_ID, name);
     }
 }

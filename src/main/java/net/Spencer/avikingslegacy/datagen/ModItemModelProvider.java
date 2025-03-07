@@ -43,6 +43,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.VIKINITECRYSTAL);
         simpleItem(ModItems.VIKINITEINGOT);
+        simpleItem(ModItems.VIKINITE_NUGGET);
+        simpleItem(ModItems.VIKING_GOLD);
 
         simpleItem(ModItems.COFFEE_TREE_SEED);
         simpleItem(ModItems.COFFEE_CHERRY);

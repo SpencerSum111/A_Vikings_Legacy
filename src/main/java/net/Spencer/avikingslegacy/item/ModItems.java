@@ -28,6 +28,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> VIKINITEINGOT = ITEMS.register("vikinite_ingot",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIKINITE_NUGGET = ITEMS.register("vikinite_nugget",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> VIKING_GOLD = ITEMS.register("viking_gold",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> VIKINITE_SWORD = ITEMS.register("vikinite_sword",
             () -> new SwordItem(ModToolTiers.VIKINITE, 14, -2F, new Item.Properties()));
