@@ -92,6 +92,7 @@ public class Viking_Captain_Model<T extends Entity> extends HierarchicalModel<T>
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 		this.animateWalk(ModAnimationDefinitions.VIKING_CAPTAIN_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(((VikingCaptainEntity) entity).idleAnimationState, ModAnimationDefinitions.VIKING_CAPTAIN_BASE, ageInTicks, 1f);
+		this.animate(((VikingCaptainEntity) entity).attackAnimationState, ModAnimationDefinitions.VIKING_CAPTAIN_ATTACK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

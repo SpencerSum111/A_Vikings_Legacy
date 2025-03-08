@@ -1,5 +1,9 @@
 package net.Spencer.avikingslegacy.entity.custom;
 
+import net.Spencer.avikingslegacy.entity.ai.VikingCaptainAttackGoal;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
@@ -21,12 +25,19 @@ import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import org.jetbrains.annotations.Nullable;
 
 public class VikingCaptainEntity extends Monster {
+
+    public static final EntityDataAccessor<Boolean> ATTACKING =
+            SynchedEntityData.defineId(VikingCaptainEntity.class, EntityDataSerializers.BOOLEAN);
+
     public VikingCaptainEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    public final AnimationState attackAnimationState = new AnimationState();
+    public int attackAnimationTimeout = 0;
 
     @Override
     public void tick() {
@@ -44,6 +55,15 @@ public class VikingCaptainEntity extends Monster {
         } else {
             --this.idleAnimationTimeout;
         }
+        if (this.isAttacking() && attackAnimationTimeout <= 0){
+            attackAnimationTimeout = 40;
+            attackAnimationState.start(this.tickCount);
+        } else {
+            --this.attackAnimationTimeout;
+        }
+        if (!this.isAttacking()){
+            attackAnimationState.stop();
+        }
     }
 
     @Override
@@ -57,10 +77,26 @@ public class VikingCaptainEntity extends Monster {
         this.walkAnimation.update(f, 0.2f);
     }
 
+    public void setAttacking(boolean attacking){
+        this.entityData.set(ATTACKING, attacking);
+    }
+
+    public boolean isAttacking(){
+        return this.entityData.get(ATTACKING);
+    }
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(ATTACKING, false);
+    }
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
+
+        this.goalSelector.addGoal(1, new VikingCaptainAttackGoal(this, 1.0D, true));
+
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 5f));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
