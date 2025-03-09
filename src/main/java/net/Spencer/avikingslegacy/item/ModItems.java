@@ -62,6 +62,9 @@ public class ModItems {
     public static final RegistryObject<Item> VIKING_EMBLEM_ORANGE = ITEMS.register("viking_emblem_orange",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> ODD_LAPTOP = ITEMS.register("odd_laptop",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> VIKING_CAPTAIN_SPAWN_EGG = ITEMS.register("viking_captain_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.VIKING_CAPTAIN, 0x3C39FF, 0xFFA649, new Item.Properties()));
 

@@ -56,6 +56,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.VIKING_EMBLEM_GREEN);
         simpleItem(ModItems.VIKING_EMBLEM_ORANGE);
 
+        simpleItem(ModItems.ODD_LAPTOP);
+
         handheldItem(ModItems.VIKINITE_SWORD);
         handheldItem(ModItems.VIKINITE_AXE);
         handheldItem(ModItems.VIKINITE_PICKAXE);

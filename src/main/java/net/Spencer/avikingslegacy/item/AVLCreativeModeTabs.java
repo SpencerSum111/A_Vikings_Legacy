@@ -52,6 +52,8 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.VIKING_EMBLEM_GREEN.get());
                                 pOutput.accept(ModItems.VIKING_EMBLEM_ORANGE.get());
 
+                                pOutput.accept(ModItems.ODD_LAPTOP.get());
+
                                 pOutput.accept(ModItems.VIKING_CAPTAIN_SPAWN_EGG.get());
 
                             })
