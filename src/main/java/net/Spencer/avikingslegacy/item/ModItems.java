@@ -64,6 +64,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> ODD_LAPTOP = ITEMS.register("odd_laptop",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PLUSH_MONKEY = ITEMS.register("plush_monkey",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BROWN_FOX_KEYCHAIN = ITEMS.register("brown_fox_keychain",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BUSINESS_CARD = ITEMS.register("business_card",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> VIKING_CAPTAIN_SPAWN_EGG = ITEMS.register("viking_captain_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.VIKING_CAPTAIN, 0x3C39FF, 0xFFA649, new Item.Properties()));
