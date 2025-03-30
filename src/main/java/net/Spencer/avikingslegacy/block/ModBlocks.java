@@ -27,6 +27,14 @@ public static final RegistryObject<Block> VIKINITE_ORE = registerBlock("vikinite
             new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLOCK_OF_VIKINITE = registerBlock("block_of_vikinite", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> MEIER_HALL_BRICKS = registerBlock("meier_hall_bricks", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
+    public static final RegistryObject<Block> MEIER_HALL_LIGHT_GREEN_TILE = registerBlock("meier_hall_light_green_tile", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES)));
+    public static final RegistryObject<Block> MEIER_HALL_GREEN_TILE = registerBlock("meier_hall_green_tile", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES)));
+    public static final RegistryObject<Block> MEIER_HALL_DARK_GREEN_TILE = registerBlock("meier_hall_dark_green_tile", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES)));
 
     public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop", () ->
             new CoffeeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

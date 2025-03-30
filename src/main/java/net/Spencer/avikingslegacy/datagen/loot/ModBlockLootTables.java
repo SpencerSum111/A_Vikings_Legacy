@@ -30,6 +30,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.BLOCK_OF_VIKINITE.get());
+        this.dropSelf(ModBlocks.MEIER_HALL_BRICKS.get());
+        this.dropSelf(ModBlocks.MEIER_HALL_LIGHT_GREEN_TILE.get());
+        this.dropSelf(ModBlocks.MEIER_HALL_GREEN_TILE.get());
+        this.dropSelf(ModBlocks.MEIER_HALL_DARK_GREEN_TILE.get());
+
         this.add(ModBlocks.VIKINITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.VIKINITE_ORE.get(), ModItems.VIKINITECRYSTAL.get()));
         this.add(ModBlocks.DEEPSLATE_VIKINITE_ORE.get(),

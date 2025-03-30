@@ -28,12 +28,17 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.COFFEE_BEANS.get());
                                 pOutput.accept(ModItems.CUP_OF_COFFEE.get());
 
-                                pOutput.accept(ModItems.VIKINITECRYSTAL.get());
                                 pOutput.accept(ModBlocks.VIKINITE_ORE.get());
                                 pOutput.accept(ModBlocks.DEEPSLATE_VIKINITE_ORE.get());
+                                pOutput.accept(ModBlocks.BLOCK_OF_VIKINITE.get());
+                                pOutput.accept(ModBlocks.MEIER_HALL_BRICKS.get());
+                                pOutput.accept(ModBlocks.MEIER_HALL_LIGHT_GREEN_TILE.get());
+                                pOutput.accept(ModBlocks.MEIER_HALL_GREEN_TILE.get());
+                                pOutput.accept(ModBlocks.MEIER_HALL_DARK_GREEN_TILE.get());
+
+                                pOutput.accept(ModItems.VIKINITECRYSTAL.get());
                                 pOutput.accept(ModItems.VIKINITEINGOT.get());
                                 pOutput.accept(ModItems.VIKINITE_NUGGET.get());
-                                pOutput.accept(ModBlocks.BLOCK_OF_VIKINITE.get());
                                 pOutput.accept(ModItems.VIKING_GOLD.get());
 
                                 pOutput.accept(ModItems.VIKINITE_SWORD.get());
