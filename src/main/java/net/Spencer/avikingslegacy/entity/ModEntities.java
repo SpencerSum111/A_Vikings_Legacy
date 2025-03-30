@@ -1,6 +1,7 @@
 package net.Spencer.avikingslegacy.entity;
 
 import net.Spencer.avikingslegacy.AVikingsLegacy;
+import net.Spencer.avikingslegacy.entity.custom.BerserkerEntity;
 import net.Spencer.avikingslegacy.entity.custom.VikingCaptainEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -16,6 +17,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<VikingCaptainEntity>> VIKING_CAPTAIN =
             ENTITY_TYPES.register("viking_captain", () -> EntityType.Builder.of(VikingCaptainEntity::new, MobCategory.MONSTER)
                     .sized(1f, 2f).build("viking_captain"));
+
+    public static final RegistryObject<EntityType<BerserkerEntity>> BERSERKER =
+            ENTITY_TYPES.register("berserker", () -> EntityType.Builder.of(BerserkerEntity::new, MobCategory.MONSTER)
+                    .sized(1f, 2f).build("berserker"));
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);

@@ -74,6 +74,9 @@ public class ModItems {
     public static final RegistryObject<Item> VIKING_CAPTAIN_SPAWN_EGG = ITEMS.register("viking_captain_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.VIKING_CAPTAIN, 0x3C39FF, 0xFFA649, new Item.Properties()));
 
+    public static final RegistryObject<Item> BERSERKER_SPAWN_EGG = ITEMS.register("berserker_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.BERSERKER, 0x4f4dff, 0xFFA649, new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

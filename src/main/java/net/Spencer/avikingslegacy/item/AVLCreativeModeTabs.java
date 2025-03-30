@@ -64,6 +64,7 @@ public class AVLCreativeModeTabs {
 
 
                                 pOutput.accept(ModItems.VIKING_CAPTAIN_SPAWN_EGG.get());
+                                pOutput.accept(ModItems.BERSERKER_SPAWN_EGG.get());
 
                             })
                             .build());

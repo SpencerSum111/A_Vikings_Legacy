@@ -4,6 +4,7 @@ import net.Spencer.avikingslegacy.AVikingsLegacy;
 import net.Spencer.avikingslegacy.entity.ModEntities;
 import net.Spencer.avikingslegacy.entity.client.ModModelLayers;
 import net.Spencer.avikingslegacy.entity.client.Viking_Captain_Model;
+import net.Spencer.avikingslegacy.entity.custom.BerserkerEntity;
 import net.Spencer.avikingslegacy.entity.custom.VikingCaptainEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -17,5 +18,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event){
         event.put(ModEntities.VIKING_CAPTAIN.get(), VikingCaptainEntity.createAttributes().build());
+        event.put(ModEntities.BERSERKER.get(), BerserkerEntity.createAttributes().build());
     }
 }

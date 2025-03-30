@@ -5,6 +5,7 @@ import net.Spencer.avikingslegacy.block.ModBlocks;
 //import net.Spencer.avikingslegacy.block.entity.ModBlockEntities;
 import net.Spencer.avikingslegacy.effect.ModEffects;
 import net.Spencer.avikingslegacy.entity.ModEntities;
+import net.Spencer.avikingslegacy.entity.client.BerserkerRenderer;
 import net.Spencer.avikingslegacy.entity.client.VikingCaptainRenderer;
 import net.Spencer.avikingslegacy.item.AVLCreativeModeTabs;
 import net.Spencer.avikingslegacy.item.ModItems;
@@ -83,6 +84,7 @@ public class AVikingsLegacy
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.VIKING_CAPTAIN.get(), VikingCaptainRenderer::new);
+            EntityRenderers.register(ModEntities.BERSERKER.get(), BerserkerRenderer::new);
         }
     }
 }
