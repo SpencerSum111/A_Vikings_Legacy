@@ -6,6 +6,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.Spencer.avikingslegacy.entity.animations.ModAnimationDefinitions;
 import net.Spencer.avikingslegacy.entity.custom.BerserkerEntity;
+import net.minecraft.client.model.ArmedModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -14,8 +15,9 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.HumanoidArm;
 
-public class Berserk_Model<T extends Entity> extends HierarchicalModel<T> {
+public class Berserker_Model<T extends Entity> extends HierarchicalModel<T> implements ArmedModel {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "berserker"), "main");
 
@@ -33,7 +35,7 @@ public class Berserk_Model<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart leftArm;
 	private final ModelPart leftItem;
 
-	public Berserk_Model(ModelPart berserker) {
+	public Berserker_Model(ModelPart berserker) {
         this.berserker = berserker;
         this.body = berserker.getChild("body");
 		this.head = this.body.getChild("head");
@@ -110,6 +112,15 @@ public class Berserk_Model<T extends Entity> extends HierarchicalModel<T> {
 
 		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
 		this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);
+	}
+
+	@Override
+	public void translateToHand(HumanoidArm arm, PoseStack poseStack) {
+		this.getArm(arm).translateAndRotate(poseStack);
+	}
+
+	public ModelPart getArm(HumanoidArm arm) {
+		return arm == HumanoidArm.LEFT ? this.leftArm : this.rightArm;
 	}
 
 	@Override
