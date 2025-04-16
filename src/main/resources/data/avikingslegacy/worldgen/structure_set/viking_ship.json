@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "avikingslegacy:viking_ship",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1846835901,
+
+    "spacing": 50,
+
+    "separation": 15,
+
+    "type": "minecraft:random_spread"
+  }
+}
