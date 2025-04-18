@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "avikingslegacy:meier_hall_5",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 19162946,
+
+    "spacing": 120,
+
+    "separation": 20,
+
+    "type": "minecraft:random_spread"
+  }
+}
