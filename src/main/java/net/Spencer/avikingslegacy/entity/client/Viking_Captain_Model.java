@@ -7,14 +7,16 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.Spencer.avikingslegacy.entity.animations.ModAnimationDefinitions;
 import net.Spencer.avikingslegacy.entity.custom.VikingCaptainEntity;
+import net.minecraft.client.model.ArmedModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.HumanoidArm;
 
-public class Viking_Captain_Model<T extends Entity> extends HierarchicalModel<T> {
+public class Viking_Captain_Model<T extends Entity> extends HierarchicalModel<T> implements ArmedModel {
 	private final ModelPart waist;
 	private final ModelPart body;
 	private final ModelPart head;
@@ -106,14 +108,26 @@ public class Viking_Captain_Model<T extends Entity> extends HierarchicalModel<T>
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		waist.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightItem.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftItem.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+
 		beard.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		helmet.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart root() {
-		return body;
+		return waist;
+	}
+
+	@Override
+	public void translateToHand(HumanoidArm arm, PoseStack poseStack) {
+		ModelPart armPart = this.getArm(arm);
+
+		// Manually shift the pose to match where the hand actually is
+		poseStack.translate(0.0D, 1.5D, 0.0D); // tweak these values!
+		armPart.translateAndRotate(poseStack);
+	}
+
+	public ModelPart getArm(HumanoidArm arm) {
+		return arm == HumanoidArm.LEFT ? this.leftarm : this.rightarm;
 	}
 }
