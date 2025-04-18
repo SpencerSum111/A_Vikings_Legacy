@@ -27,6 +27,7 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.COFFEE_CHERRY.get());
                                 pOutput.accept(ModItems.COFFEE_BEANS.get());
                                 pOutput.accept(ModItems.CUP_OF_COFFEE.get());
+                                pOutput.accept(ModItems.MOD_FEEDBACK_QR_CODE.get());
 
                                 pOutput.accept(ModBlocks.VIKINITE_ORE.get());
                                 pOutput.accept(ModBlocks.DEEPSLATE_VIKINITE_ORE.get());

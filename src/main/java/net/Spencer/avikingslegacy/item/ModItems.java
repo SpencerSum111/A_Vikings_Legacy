@@ -15,6 +15,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AVikingsLegacy.MOD_ID);
 
+    public static final RegistryObject<Item> MOD_FEEDBACK_QR_CODE = ITEMS.register("mod_feedback_qr_code",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> COFFEE_TREE_SEED = ITEMS.register("coffee_tree_seed",
             () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(), new Item.Properties()));
     public static final RegistryObject<Item> COFFEE_CHERRY = ITEMS.register("coffee_cherry",

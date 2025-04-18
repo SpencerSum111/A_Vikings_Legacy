@@ -61,6 +61,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BROWN_FOX_KEYCHAIN);
         simpleItem(ModItems.BUSINESS_CARD);
 
+        simpleItem(ModItems.MOD_FEEDBACK_QR_CODE);
+
 
         handheldItem(ModItems.VIKINITE_SWORD);
         handheldItem(ModItems.VIKINITE_AXE);
