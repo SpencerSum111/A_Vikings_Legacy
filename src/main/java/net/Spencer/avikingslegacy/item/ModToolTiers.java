@@ -16,4 +16,9 @@ public class ModToolTiers {
             new ForgeTier(5, 2025, 10f, 0f, 20,
                     ModTags.Blocks.NEEDS_VIKINITE_TOOL, () -> Ingredient.of(ModItems.VIKINITEINGOT.get())),
             new ResourceLocation(AVikingsLegacy.MOD_ID, "vikinite_ingot"), List.of(Tiers.NETHERITE), List.of());
+
+    public static final Tier VIKING_SABER = TierSortingRegistry.registerTier(
+            new ForgeTier(5, 2025, 10f, 0f, 20,
+                    ModTags.Blocks.NEEDS_VIKING_SABER, () -> Ingredient.of(ModItems.VIKINITEINGOT.get())),
+            new ResourceLocation(AVikingsLegacy.MOD_ID, "viking_saber"), List.of(Tiers.NETHERITE), List.of());
 }

@@ -47,6 +47,8 @@ public class AVLCreativeModeTabs {
                                 pOutput.accept(ModItems.VIKINITE_SHOVEL.get());
                                 pOutput.accept(ModItems.VIKINITE_HOE.get());
 
+                                pOutput.accept(ModItems.VIKING_SABER.get());
+
                                 pOutput.accept(ModItems.VIKINITE_HELMET.get());
                                 pOutput.accept(ModItems.VIKINITE_CHESTPLATE.get());
                                 pOutput.accept(ModItems.VIKINITE_LEGGINGS.get());

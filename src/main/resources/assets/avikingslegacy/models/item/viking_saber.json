@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "avikingslegacy:item/viking_saber_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "avikingslegacy:item/viking_saber_2d"
+    },
+    "ground": {
+      "parent": "avikingslegacy:item/viking_saber_2d"
+    },
+    "fixed": {
+      "parent": "avikingslegacy:item/viking_saber_2d"
+    }
+  }
+}

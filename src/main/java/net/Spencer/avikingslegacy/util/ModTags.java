@@ -10,6 +10,8 @@ public class ModTags {
     public static class Blocks{
         public static final TagKey<Block> NEEDS_VIKINITE_TOOL = tag("needs_vikinite_tool");
 
+        public static final TagKey<Block> NEEDS_VIKING_SABER = tag("needs_viking_saber");
+
         private static TagKey<Block> tag(String name){
             return BlockTags.create (new ResourceLocation(AVikingsLegacy.MOD_ID, name));
         }

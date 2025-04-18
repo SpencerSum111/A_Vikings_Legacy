@@ -44,6 +44,9 @@ public class ModItems {
     public static final RegistryObject<Item> VIKINITE_HOE = ITEMS.register("vikinite_hoe",
             () -> new HoeItem(ModToolTiers.VIKINITE, 0, 0, new Item.Properties()));
 
+    public static final RegistryObject<Item> VIKING_SABER = ITEMS.register("viking_saber",
+            () -> new SwordItem(ModToolTiers.VIKING_SABER, 9, -2F, new Item.Properties()));
+
     public static final RegistryObject<Item> VIKINITE_HELMET = ITEMS.register("vikinite_helmet",
             () -> new ArmorItem(ModArmorMaterials.VIKINITE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> VIKINITE_CHESTPLATE = ITEMS.register("vikinite_chestplate",
